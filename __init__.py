@@ -1,16 +1,16 @@
 import os
 
-# try:
-#     import xmltodict
-# except:
-#     os.system("pip install xmltodict")
+try:
+    import xmltodict
+except:
+    os.system("pip install xmltodict")
 
-# try:
-#     import lxml
-# except:
-#     os.system("pip install lxml")
+try:
+    import lxml
+except:
+    os.system("pip install lxml")
 
-# from support import SupportSC
+from support import SupportSC
 
 # from .site_util import SiteUtil
 
