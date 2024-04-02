@@ -69,7 +69,7 @@ except:
 
 # from .server_util import MetadataServerUtil
 
-from .site_daum import SiteDaum
+# from .site_daum import SiteDaum
 
 # from .site_daum_movie import SiteDaumMovie
 # from .site_daum_tv import SiteDaumTv
