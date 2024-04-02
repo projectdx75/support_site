@@ -15,70 +15,73 @@ from support import SupportSC
 from .site_util import SiteUtil
 
 try:
-    if os.path.exists(os.path.join(os.path.dirname(__file__), 'wavve.py')):
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "wavve.py")):
         from .wavve import SupportWavve
     else:
-        SupportWavve = SupportSC.load_module_f(__file__, 'wavve').SupportWavve
+        SupportWavve = SupportSC.load_module_f(__file__, "wavve").SupportWavve
 except:
     pass
 
 try:
-    if os.path.exists(os.path.join(os.path.dirname(__file__), 'kakaotv.py')):
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "kakaotv.py")):
         from .kakaotv import SupportKakaotv
     else:
-        SupportKakaotv = SupportSC.load_module_f(__file__, 'kakaotv').SupportKakaotv
+        SupportKakaotv = SupportSC.load_module_f(
+            __file__, "kakaotv"
+        ).SupportKakaotv
 except:
     pass
 
 try:
-    if os.path.exists(os.path.join(os.path.dirname(__file__), 'seezn.py')):
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "seezn.py")):
         from .seezn import SupportSeezn
     else:
-        SupportSeezn = SupportSC.load_module_f(__file__, 'seezn').SupportSeezn
+        SupportSeezn = SupportSC.load_module_f(__file__, "seezn").SupportSeezn
 except:
     pass
 
 try:
-    if os.path.exists(os.path.join(os.path.dirname(__file__), 'tving.py')):
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "tving.py")):
         from .tving import SupportTving
     else:
-        SupportTving = SupportSC.load_module_f(__file__, 'tving').SupportTving
+        SupportTving = SupportSC.load_module_f(__file__, "tving").SupportTving
 except:
     pass
 
 
 try:
-    if os.path.exists(os.path.join(os.path.dirname(__file__), 'cppl.py')):
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "cppl.py")):
         from .cppl import SupportCppl
     else:
-        SupportCppl = SupportSC.load_module_f(__file__, 'cppl').SupportCppl
+        SupportCppl = SupportSC.load_module_f(__file__, "cppl").SupportCppl
 except:
     pass
 
 
 try:
-    if os.path.exists(os.path.join(os.path.dirname(__file__), 'dl_watcha.py')):
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "dl_watcha.py")):
         from .dl_watcha import DL_Watcha
     else:
-        DL_Watcha = SupportSC.load_module_f(__file__, 'dl_watcha').DL_Watcha
+        DL_Watcha = SupportSC.load_module_f(__file__, "dl_watcha").DL_Watcha
 except:
     pass
 
 
 from .server_util import MetadataServerUtil
-from .site_daum import SiteDaum
-from .site_daum_movie import SiteDaumMovie
-from .site_daum_tv import SiteDaumTv
-from .site_lastfm import SiteLastfm
-from .site_melon import SiteMelon
-from .site_naver import SiteNaver, SiteNaverMovie
-from .site_naver_book import SiteNaverBook
-from .site_tmdb import SiteTmdbFtv, SiteTmdbMovie, SiteTmdbTv
-from .site_tvdb import SiteTvdbTv
-from .site_tving import SiteTvingMovie, SiteTvingTv
-from .site_vibe import SiteVibe
-from .site_watcha import SiteWatchaMovie, SiteWatchaTv
-from .site_wavve import SiteWavveMovie, SiteWavveTv
+
+# from .site_daum import SiteDaum
+# from .site_daum_movie import SiteDaumMovie
+# from .site_daum_tv import SiteDaumTv
+# from .site_lastfm import SiteLastfm
+# from .site_melon import SiteMelon
+# from .site_naver import SiteNaver, SiteNaverMovie
+# from .site_naver_book import SiteNaverBook
+# from .site_tmdb import SiteTmdbFtv, SiteTmdbMovie, SiteTmdbTv
+# from .site_tvdb import SiteTvdbTv
+# from .site_tving import SiteTvingMovie, SiteTvingTv
+# from .site_vibe import SiteVibe
+# from .site_watcha import SiteWatchaMovie, SiteWatchaTv
+# from .site_wavve import SiteWavveMovie, SiteWavveTv
 
 """
 
