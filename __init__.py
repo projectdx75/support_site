@@ -12,7 +12,7 @@ except:
 
 from support import SupportSC
 
-from .site_util import SiteUtil
+# from .site_util import SiteUtil
 
 # try:
 #     if os.path.exists(os.path.join(os.path.dirname(__file__), "wavve.py")):
