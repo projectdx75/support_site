@@ -40,13 +40,13 @@ from support import SupportSC
 # except:
 #     pass
 
-# try:
-#     if os.path.exists(os.path.join(os.path.dirname(__file__), "tving.py")):
-#         from .tving import SupportTving
-#     else:
-#         SupportTving = SupportSC.load_module_f(__file__, "tving").SupportTving
-# except:
-#     pass
+try:
+    if os.path.exists(os.path.join(os.path.dirname(__file__), "tving.py")):
+        from .tving import SupportTving
+    else:
+        SupportTving = SupportSC.load_module_f(__file__, "tving").SupportTving
+except:
+    pass
 
 
 # try:

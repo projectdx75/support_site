@@ -78,7 +78,7 @@ class ModuleSite(PluginModuleBase):
         print("support_site module load...")
         # self.__wavve_init()
         # self.__daum_init()
-        # self.__tving_init()
+        self.__tving_init()
         # self.__naver_init()
 
     def plugin_load_celery(self):
