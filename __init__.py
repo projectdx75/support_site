@@ -110,4 +110,4 @@ from .site_uncensored.site_heyzo import SiteHeyzo
 
 """
 
-from .patches import patches
+# from .patches import patches
