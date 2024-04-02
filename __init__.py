@@ -79,7 +79,7 @@ except:
 # from .site_naver_book import SiteNaverBook
 # from .site_tmdb import SiteTmdbFtv, SiteTmdbMovie, SiteTmdbTv
 # from .site_tvdb import SiteTvdbTv
-from .site_tving import SiteTvingMovie, SiteTvingTv
+# from .site_tving import SiteTvingMovie, SiteTvingTv
 
 # from .site_vibe import SiteVibe
 # from .site_watcha import SiteWatchaMovie, SiteWatchaTv
