@@ -75,7 +75,7 @@ class SiteUtil(object):
         if headers is None:
             headers = cls.default_headers
         if post_data is None:
-            if verify == None:
+            if verify is None:
                 res = cls.session.get(
                     url, headers=headers, proxies=proxies, cookies=cookies
                 )
@@ -88,7 +88,7 @@ class SiteUtil(object):
                     verify=verify,
                 )
         else:
-            if verify == None:
+            if verify is None:
                 res = cls.session.post(
                     url,
                     headers=headers,
