@@ -13,6 +13,7 @@ except:
     os.system("pip install tmdbsimple")
     import tmdbsimple
 tmdbsimple.API_KEY = 'f090bb54758cabf231fb605d3e3e0468'
+tmdbsimple.REQUESTS_TIMEOUT = 5
 
 ARTWORK_ITEM_LIMIT = 10
 POSTER_SCORE_RATIO = .3 # How much weight to give ratings vs. vote counts when picking best posters. 0 means use only ratings.

@@ -20,7 +20,7 @@ class MetadataServerUtil(object):
             url = f"{WEB_DIRECT_URL}/meta/get_meta.php?"
             url += urllib.parse.urlencode({'type':'meta', 'code':code})
             logger.warning(url)
-            data = requests.get(url).json()
+            data = requests.get(url, timeout=10).json()
             if data['ret'] == 'success':
                 return data['data']
         except Exception as exception:
@@ -33,7 +33,7 @@ class MetadataServerUtil(object):
             url = f'{SERVER_PLUGIN_DDNS}/server/normal/metadata/set'
             upload_id = F.PluginManager.get_plugin_instance('sjva').ModelSetting.get('sjva_id')
             param = {'code':code, 'data':json.dumps(data), 'user':upload_id, 'keyword':keyword}
-            data = requests.post(url, data=param).json()
+            data = requests.post(url, data=param, timeout=10).json()
             if data['ret'] == 'success':
                 logger.info('%s Data save success. Thanks!!!!', code)
         except Exception as exception:
@@ -48,7 +48,7 @@ class MetadataServerUtil(object):
             for tmp in data['thumb']:
                 if tmp['value'] is None or tmp['value'].find('.discordapp.') == -1:
                     return
-                if requests.get(tmp['value']).status_code != 200:
+                if requests.get(tmp['value'], timeout=5).status_code != 200:
                     return
             if SiteUtil.is_include_hangul(data['plot']) == False:
                 return
@@ -66,7 +66,7 @@ class MetadataServerUtil(object):
             for tmp in data['thumb']:
                 if tmp['value'] is None or tmp['value'].find('.discordapp.') == -1:
                     return
-                if requests.get(tmp['value']).status_code != 200:
+                if requests.get(tmp['value'], timeout=5).status_code != 200:
                     return
             if SiteUtil.is_include_hangul(data['tagline']) == False:
                 return
@@ -84,7 +84,7 @@ class MetadataServerUtil(object):
         try:
             url = f"{WEB_DIRECT_URL}/meta/get_meta.php?"
             url += urllib.parse.urlencode({'type':'extra', 'code':code})
-            data = requests.get(url).json()
+            data = requests.get(url, timeout=10).json()
             if data['ret'] == 'success':
                 return data['data']
         except Exception as exception:

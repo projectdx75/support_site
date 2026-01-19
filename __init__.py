@@ -32,7 +32,8 @@ try:
     else:
         SupportWavve = SupportSC.load_module_f(__file__, 'wavve').SupportWavve
 except Exception:
-    print(traceback.format_exc())
+    SupportWavve = None
+    #print(traceback.format_exc())
 
 
 try:
@@ -41,7 +42,8 @@ try:
     else:
         SupportTving = SupportSC.load_module_f(__file__, 'tving').SupportTving
 except Exception:
-    print(traceback.format_exc())
+    SupportTving = None
+    #print(traceback.format_exc())
 
 
 try:
@@ -50,7 +52,8 @@ try:
     else:
         SupportCppl = SupportSC.load_module_f(__file__, 'cppl').SupportCppl
 except Exception:
-    print(traceback.format_exc())
+    SupportCppl = None
+    #print(traceback.format_exc())
 
 
 from .server_util import MetadataServerUtil
