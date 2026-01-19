@@ -5,6 +5,12 @@ import traceback
 from typing import Sequence
 
 
+class DummySupport:
+    @staticmethod
+    def initialize(*args, **kwargs):
+        pass
+
+
 def check_packages(packages: Sequence[tuple[str, str]]) -> None:
     for pkg, pi in packages:
         try:
@@ -32,7 +38,7 @@ try:
     else:
         SupportWavve = SupportSC.load_module_f(__file__, 'wavve').SupportWavve
 except Exception:
-    SupportWavve = None
+    SupportWavve = DummySupport
     #print(traceback.format_exc())
 
 
@@ -42,7 +48,7 @@ try:
     else:
         SupportTving = SupportSC.load_module_f(__file__, 'tving').SupportTving
 except Exception:
-    SupportTving = None
+    SupportTving = DummySupport
     #print(traceback.format_exc())
 
 
@@ -52,7 +58,7 @@ try:
     else:
         SupportCppl = SupportSC.load_module_f(__file__, 'cppl').SupportCppl
 except Exception:
-    SupportCppl = None
+    SupportCppl = DummySupport
     #print(traceback.format_exc())
 
 
